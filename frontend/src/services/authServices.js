@@ -1,11 +1,5 @@
-import axios from "axios";
+import api from "../utils/api";
 
-const API = axios.create({
-  baseURL: "http://localhost:8000",
-});
-
-export const signup = (data) =>
-  axios.post("http://localhost:8000/auth/signup", data);
-
-export const login = (data) =>
-  axios.post("http://localhost:8000/auth/login", data);
+export const signup = (data) => api.post("/auth/signup", data);
+export const login = (data) => api.post("/auth/login", data);
+export const googleLogin = (data) => api.post("/auth/google", data);

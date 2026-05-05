@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { login, signup } from "../../services/authServices";
+import GoogleButton from "./GoogleButton";
 
 export default function AuthForm() {
   const [isLogin, setIsLogin] = useState(true);
@@ -125,9 +126,7 @@ export default function AuthForm() {
       </div>
 
       {/* Google */}
-      <button className="google-btn">
-        Continue with Google
-      </button>
+      <GoogleButton />
 
       {/* Toggle */}
       <p className="toggle">
